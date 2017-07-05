@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Registro Usuarios</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+ <link href="assets/estilos.css" rel="stylesheet">
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div class="">
+
+		<form id="datos" enctype="multipart/form-data" class="" method="post" action="<?=base_url()?>guardarCitas">
+			<div class="">
+				<div class="form-group">
+  					<label for="text">Nombre:</label>
+					<br></br>
+					<input type="text" class="" id="nombre" name="nombre" placeholder="Ej. Dayánn" required />
+				</div>
+				<div class="form-group">
+					<label for="pwd">Apellidos:</label>
+					<br></br>
+					<input type="text" name="apellidos" class="" id="apellidos" placeholder="Ej. Barrantes Guzmán" required />
+				</div>
+				<div class="form-group">
+					<label for="pwd">Telefono:</label>
+					<br></br>
+					<input type="tel" name="numero" id="numero" placeholder="Ej. 8888-8888" required>
+				</div>
+				<div class="form-group">
+					<label for="pwd"> Usuario:</label>
+					<br></br>
+					<input type="text" name="user" class="" id="user" placeholder="Ej. kdbarrantes" required />
+				</div>
+				<div class="form-group">
+					<label for="pwd"> Contraseña:</label>
+					<br></br>
+					<input type="password" name="pass" class="" id="pass" placeholder="Ej. ***********" required />
+				</div>
+
+			</div>
+			<input type="submit" value="Guardar" class="btn btn-default">
+		</form>
+
+	</div>
+	</div>
+	</div>
+	</div>
+
+</body>
+
+</html>
