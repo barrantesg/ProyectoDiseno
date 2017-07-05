@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/estilos.css" rel="stylesheet">
+
+  <title>Consultorio en linea </title>
+</head>
+
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Principal.html">ConsultaEnLinea</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Citas</a></li>
+      <li><a href="#">Configuraciones</a></li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="Registro_Usuarios.html"><span class="glyphicon glyphicon-user"></span> Registro</a></li>
+      <li><a href="Inicio_Sesion.html"><span class="glyphicon glyphicon-log-in"></span>  <i>Inicio de Sesion</i></a></li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<table class="table">
+		<thead>
+			<tr>
+
+				<th>Fecha de cita</th>
+				<th>Hora de Cita</th>
+				<th>Servicio</th>
+				<th>Cliente</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($cita as $cit): ?>
+			<tr>
+				<td>
+					<?php echo $cit['fecha_cita']?>
+				</td>
+				<td>
+					<?php echo $cit['hora_cita']?>
+				</td>
+
+				<td>
+					<?php echo $cit['servicio']?>
+
+				</td>
+				<td>
+					<?php echo $cit['cedula_cliente']?>
+				</td>
+				<td><a href="<?php echo base_url()?>ride/editridesP?id=<?php echo $cit['id']; ?>">ver</a></td>
+			</tr>
+			<?php endforeach;?>
+
+		</tbody>
+	</table>
+</body>
+
+</html>
