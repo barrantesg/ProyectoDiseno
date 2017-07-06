@@ -21,7 +21,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="#">Citas</a></li>
-      <li><a href="#">Configuraciones</a></li>
+      <li><a href="Conf_Usuario.html">Configuraciones</a></li>
 
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -53,21 +53,19 @@
         <td>4:00 PMe</td>
         <td>Extraccion</td>
         <td>108430267</td>
-        <td><a href="#">Editar - </a><a href="#", onclick="myFunction()">Eliminar</a></td>
+        <td><a href="Registro_Cita.html">Editar - </a><a href="#", onclick="myFunction()">Eliminar</a></td>
       </tr>
       <tr>
         <td>14/07/2017</td>
         <td>8:30 AM</td>
         <td>Revision</td>
         <td>108430267</td>
-        <td><a href="#">Editar - </a><a href="#", onclick="myFunction()">Eliminar</a></td>
-        <p id="demo"></p>
-      </tr>
+        <td><a href="Registro_Cita.html">Editar - </a><a href="#", onclick="myFunction()">Eliminar</a></td>
 
+      </tr>
     </tbody>
   </table>
 </div>
-
 
 <div>
 <script>
@@ -75,14 +73,14 @@ function myFunction() {
     var txt;
     var r = confirm("Seguro que desea eliminar esta cita?");
     if (r == true) {
-        txt = "Su cita fue eliminada con exito!";
+        var r = confirm("Su cita fue eliminada con exito!");
     } else {
 
     }
-    document.getElementById("demo").innerHTML = txt;
 }
 </script>
 </div>
+
 
 </body>
 </html>
