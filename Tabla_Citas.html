@@ -8,7 +8,9 @@
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/estilos.css" rel="stylesheet">
 
-  <title>Consultorio en linea </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Nutri-U</title>
 </head>
 
 <header>
@@ -17,53 +19,67 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="Principal.html">ConsultaEnLinea</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">Citas</a></li>
-      <li><a href="#">Configuraciones</a></li>
 
-    </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="Registro_Usuarios.html"><span class="glyphicon glyphicon-user"></span> Registro</a></li>
-      <li><a href="Inicio_Sesion.html"><span class="glyphicon glyphicon-log-in"></span>  <i>Inicio de Sesion</i></a></li>
+
+      <li><a href="Conf_Usuario.html"><span class="glyphicon glyphicon-log-in"></span>  <i>kdbarrantes</i></a></li>
+
     </ul>
   </div>
 </nav>
 </header>
+<body>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-	<table class="table">
-		<thead>
-			<tr>
+<div class="container">
+  <h2>Mis Citas</h2>
 
-				<th>Fecha de cita</th>
-				<th>Hora de Cita</th>
-				<th>Servicio</th>
-				<th>Cliente</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php foreach ($cita as $cit): ?>
-			<tr>
-				<td>
-					<?php echo $cit['fecha_cita']?>
-				</td>
-				<td>
-					<?php echo $cit['hora_cita']?>
-				</td>
+<br />
+<a href="Registro_Cita.html">Agregar </a>
+<br /> <br />
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Fecha de Cita</th>
+        <th>Hora de Cita</th>
+        <th>Servicio</th>
+        <th>Cliente</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>25/07/2017</td>
+        <td>4:00 PMe</td>
+        <td>Extraccion</td>
+        <td>108430267</td>
+        <td><a href="Registro_Cita.html">Editar - </a><a href="#", onclick="myFunction()">Eliminar</a></td>
+      </tr>
+      <tr>
+        <td>14/07/2017</td>
+        <td>8:30 AM</td>
+        <td>Revision</td>
+        <td>108430267</td>
+        <td><a href="Registro_Cita.html">Editar - </a><a href="#", onclick="myFunction()">Eliminar</a></td>
 
-				<td>
-					<?php echo $cit['servicio']?>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-				</td>
-				<td>
-					<?php echo $cit['cedula_cliente']?>
-				</td>
-				<td><a href="<?php echo base_url()?>ride/editridesP?id=<?php echo $cit['id']; ?>">ver</a></td>
-			</tr>
-			<?php endforeach;?>
+<div>
+<script>
+function myFunction() {
+    var txt;
+    var r = confirm("Seguro que desea eliminar esta cita?");
+    if (r == true) {
+        var r = confirm("Su cita fue eliminada con exito!");
+    } else {
 
-		</tbody>
-	</table>
+    }
+}
+</script>
+</div>
+
+
 </body>
-
 </html>

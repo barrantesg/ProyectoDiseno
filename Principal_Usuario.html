@@ -1,48 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
 
-  <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/estilos.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/estilos.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Nutri-U</title>
+  </head>
 
-  <title>Consultorio en linea </title>
-</head>
+  <header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="Principal.html">ConsultaEnLinea</a>
+      </div>
 
-<header>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="Principal.html">ConsultaEnLinea</a>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Conf_Usuario.html"><span class="glyphicon glyphicon-log-in"></span>  <i>kdbarrantes</i></a></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">Citas</a></li>
-      <li><a href="Conf_Usuario.html">Configuraciones</a></li>
-
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="Registro_Usuarios.html"><span class="glyphicon glyphicon-user"></span> Registro</a></li>
-      <li><a href="Inicio_Sesion.html"><span class="glyphicon glyphicon-log-in"></span>  <i>Inicio de Sesion</i></a></li>
-    </ul>
-  </div>
-</nav>
+  </nav>
 </header>
+
 <body>
-<i class="fa fa-plus-square-o" style="font-size:36px;"></i>
 
 <div class="container">
-  <h2>Mis Citas</h2>
+  <h2>Buscador de Citas</h2> <br />
 
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Buscar</button>
+
+        </span>
+      </div>
+    </div>
+  </div>
+  <br /> <br />
+  
   <table class="table table-bordered">
     <thead>
       <tr>
         <th>Fecha de Cita</th>
-        <th>Hora de Cita</th>
-        <th>Servicio</th>
         <th>Cliente</th>
         <th>Acciones</th>
       </tr>
@@ -50,37 +54,18 @@
     <tbody>
       <tr>
         <td>25/07/2017</td>
-        <td>4:00 PMe</td>
-        <td>Extraccion</td>
         <td>108430267</td>
-        <td><a href="Registro_Cita.html">Editar - </a><a href="#", onclick="myFunction()">Eliminar</a></td>
+        <td><a href="Tabla_Citas.html">Ver </a></td>
       </tr>
       <tr>
         <td>14/07/2017</td>
-        <td>8:30 AM</td>
-        <td>Revision</td>
-        <td>108430267</td>
-        <td><a href="Registro_Cita.html">Editar - </a><a href="#", onclick="myFunction()">Eliminar</a></td>
+        <td>207530426</td>
+        <td><a href="Tabla_Citas.html">Ver </a></td>
 
       </tr>
     </tbody>
   </table>
 </div>
-
-<div>
-<script>
-function myFunction() {
-    var txt;
-    var r = confirm("Seguro que desea eliminar esta cita?");
-    if (r == true) {
-        var r = confirm("Su cita fue eliminada con exito!");
-    } else {
-
-    }
-}
-</script>
-</div>
-
 
 </body>
 </html>
